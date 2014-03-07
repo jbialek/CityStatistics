@@ -1,0 +1,9 @@
+<h1>Cities in {{state}}!</h1>
+<div>
+    <input id="cityfilter" ng-model="cityfilter" type="search" placeholder="City Name">
+
+    </input>
+</div>
+<ul>
+    <li ng-repeat="city in cities | filter:cityfilter"><a href="#/detail/{{city.state}}/city/{{city.city}}">{{city.city}}</a></li>
+</ul>
