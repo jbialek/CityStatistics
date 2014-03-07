@@ -1,9 +1,13 @@
 <h1>Cities in {{state}}!</h1>
-<div>
-    <input id="cityfilter" ng-model="cityfilter" type="search" placeholder="City Name">
+<div class="row">
+    <div class="col-xs-4">
+        <input id="cityfilter" ng-model="cityfilter" type="search" placeholder="City Name" class="form-control">
 
-    </input>
+        </input>
+    </div>
 </div>
-<ul>
-    <li ng-repeat="city in cities | filter:cityfilter"><a href="#/detail/{{city.state}}/city/{{city.city}}">{{city.city}}</a></li>
-</ul>
+<div class="row">
+    <ul>
+        <li ng-repeat="city in cities | filter:cityfilter"><a href="#/detail/{{city.state}}/city/{{city.city}}">{{city.city}}</a></li>
+    </ul>
+</div>
